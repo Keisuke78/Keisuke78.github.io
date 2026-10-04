@@ -173,32 +173,30 @@ mark {
   padding: 2em 1em;
 }
 
-/* ---------- ヒーロー画像エリア ---------- */
+/* ---------- ヒーロー図版エリア ---------- */
 .hero {
-  position: relative;
-  height: 320px;
-  background: linear-gradient(135deg, #4a6741 0%, #7a9a6d 50%, #b8860b 100%);
-  background: url("images/hero.jpg") center 80% / cover no-repeat,
-    linear-gradient(135deg, #4a6741 0%, #7a9a6d 50%, #b8860b 100%);
+  background: #fff;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 2em 1.5em;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-.hero-text {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+/* ラベル付きの図なので切り抜かず全体を表示する */
+.hero img {
+  max-height: 560px;
+  width: auto;
 }
 
 .hero-caption {
+  max-width: var(--max-width);
+  margin: 0.8em auto 0;
+  padding: 0 1.5em;
   text-align: right;
-  padding-right: 1.5em;
   font-size: 0.8rem;
+  line-height: 1.6;
   color: var(--color-text-light);
-  margin-top: 0.8em;
 }
 
 /* ---------- メインコンテンツ ---------- */
@@ -300,10 +298,7 @@ mark {
   .site-title {
     font-size: 1.5rem;
   }
-  .hero {
-    height: 200px;
-  }
-  .hero-text {
-    font-size: 1.3rem;
+  .hero img {
+    max-height: 380px;
   }
 }
